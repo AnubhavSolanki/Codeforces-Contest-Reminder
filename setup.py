@@ -30,11 +30,10 @@ def main():
             if("Before" in  before_text_check):
                 break
             contest_name = driver.find_element_by_xpath('/html/body/div[6]/div[4]/div[2]/div[1]/div[1]/div[6]/table/tbody/tr[' + str(i+1) +']/td[1]').text
-            time_of_contest = driver.find_element_by_xpath('/html/body/div[6]/div[4]/div[2]/div[1]/div[1]/div[6]/table/tbody/tr['+str(i+1) +']/td[5]/span').text
-            el = driver.find_element_by_xpath('/html/body/div[6]/div[4]/div[2]/div[1]/div[1]/div[6]/table/tbody/tr[' +str(i+1) +']')
-            id_contest = el.get_attribute('data-contestid')
-            word = time_of_contest.split(':')
-            start_time = datetime.now() + timedelta(hours=int(word[0]),minutes=int(word[1]),seconds=int(word[2]))
+            id_contest = driver.find_element_by_xpath('/html/body/div[6]/div[4]/div[2]/div[1]/div[1]/div[6]/table/tbody/tr[' +str(i+1) +']').get_attribute('data-contestid')
+            start_time = driver.find_element_by_xpath('/html/body/div[6]/div[4]/div[2]/div[1]/div[1]/div[6]/table/tbody/tr['+str(i+1)+']/td[3]/a').text
+            start_time = start_time[:-7]
+            start_time = datetime.strptime(start_time, '%b/%d/%Y %H:%M')
             duration = driver.find_element_by_xpath('/html/body/div[6]/div[4]/div[2]/div[1]/div[1]/div[6]/table/tbody/tr['+str(i+1)+']/td[4]').text
             duration = str(duration).split(':')
             end_time = start_time + timedelta(hours = int(duration[0]), minutes = int(duration[1]))
