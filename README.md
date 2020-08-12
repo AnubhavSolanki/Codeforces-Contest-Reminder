@@ -8,7 +8,7 @@ email_or_username=""
 password=""  
 ```
 
-- Follow the documentation ```https://developers.google.com/calendar/quickstart/python```
+- Follow the documentation [https://developers.google.com/calendar/quickstart/python](https://developers.google.com/calendar/quickstart/python)
 
 - Now, Navigate to cloned repo through cmd and type    
 ```
