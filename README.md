@@ -15,3 +15,6 @@ password=""
 pip install -r requirements.txt
 python setup.py
 ```
+
+# Pro Tip :
+If you have completely setup the script then you can use one_click_start batch file to quickly run the script.
