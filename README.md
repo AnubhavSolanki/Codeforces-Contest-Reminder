@@ -1,6 +1,9 @@
 # Codeforces-Contest-Reminder
 This project registers me on the available contests on codeforces and also set reminder on google calendar.  
 
+## Video Link :
+https://www.linkedin.com/posts/anubhavsolanki_codeforces-selenium-webabrscraping-activity-6699113020582436864-gsog
+
 # Installation :   
 - Add .env file and enter your codeforces username and password 
 ```
